@@ -11,7 +11,13 @@ dev_dependencies:
 
 # Melos konfigürasyonumuz
 melos:
+
+  ide:
+    intellij:
+      enabled: false
+
   sdkPath: .fvm/flutter_sdk
+
   command:
     bootstrap:
       runPubGetInParallel: true
