@@ -1,0 +1,17 @@
+name: melos_example
+environment:
+  sdk: ^3.11.5
+
+# Alt paketlerimizin nerede olduğunu belirtiyoruz
+workspace:
+  - packages/*
+
+dev_dependencies:
+  melos: ^7.0.0
+
+# Melos konfigürasyonumuz
+melos:
+  sdkPath: .fvm/flutter_sdk
+  command:
+    bootstrap:
+      runPubGetInParallel: true
