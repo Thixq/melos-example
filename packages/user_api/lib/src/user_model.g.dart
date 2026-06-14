@@ -7,7 +7,13 @@ part of 'user_model.dart';
 // **************************************************************************
 
 UserModel _$UserModelFromJson(Map<String, dynamic> json) =>
-    UserModel(id: json['id'] as String, name: json['name'] as String);
+    $checkedCreate('UserModel', json, ($checkedConvert) {
+      final val = UserModel(
+        id: $checkedConvert('id', (v) => v as String),
+        name: $checkedConvert('name', (v) => v as String),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
   'id': instance.id,
