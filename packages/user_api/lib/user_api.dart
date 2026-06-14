@@ -4,5 +4,4 @@
 library;
 
 export 'src/user_api_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/user_model.dart';
