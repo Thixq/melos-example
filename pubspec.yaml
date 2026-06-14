@@ -19,6 +19,11 @@ melos:
       hooks:
         post: |
           melos exec --depends-on="build_runner" -- "dart run build_runner build --delete-conflicting-outputs"
+    version:
+      linkToCommits: true
+      workspaceChangelog: true
+      changelogCommitBodies:
+        include: true
   scripts:
     test:smart:
       run: melos exec --fail-fast --dir-exists="test" --diff=main --include-dependents -- "dart test"

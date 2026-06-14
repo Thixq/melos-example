@@ -4,7 +4,10 @@ part 'user_model.g.dart';
 
 @JsonSerializable(checked: true)
 class UserModel {
+  /// The `id` field is required and must be provided when creating an instance of `UserModel`.
   final String id;
+
+  /// The `name` field is required and must be provided when creating an instance of `UserModel`.
   final String name;
 
   UserModel({required this.id, required this.name});
