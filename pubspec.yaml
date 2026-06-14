@@ -1,4 +1,9 @@
 name: melos_example
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+
+repository: https://github.com/Thixq/melos-example
+
 environment:
   sdk: ^3.11.5
 
@@ -27,4 +32,4 @@ melos:
   scripts:
     test:smart:
       run: melos exec --fail-fast --dir-exists="test" --diff=main --include-dependents -- "dart test"
-      description: "It runs tests only for packages that have changed relative to the main branch and depend on it."
+      description: "Sadece main branch'ine göre değişen ve onlara bağımlı olan paketlerin testlerini çalıştırır."

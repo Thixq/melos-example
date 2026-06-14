@@ -11,6 +11,7 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) =>
       final val = UserModel(
         id: $checkedConvert('id', (v) => v as String),
         name: $checkedConvert('name', (v) => v as String),
+        email: $checkedConvert('email', (v) => v as String?),
       );
       return val;
     });
@@ -18,4 +19,5 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,
+  'email': instance.email,
 };

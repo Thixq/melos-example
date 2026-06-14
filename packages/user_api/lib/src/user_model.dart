@@ -10,7 +10,9 @@ class UserModel {
   /// The `name` field is required and must be provided when creating an instance of `UserModel`.
   final String name;
 
-  UserModel({required this.id, required this.name});
+  final String? email;
+
+  UserModel({required this.id, required this.name, this.email});
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>
       _$UserModelFromJson(json);
